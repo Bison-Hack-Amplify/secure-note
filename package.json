@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "name": "@amplify/monorepo",
+  "scripts": {
+    "dev": "echo 'hello'"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@babel/*",
+        "expo-modules-*",
+        "typescript"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "dotenv": "^16.4.1",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.2",
+    "turbo": "^1.12.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+  }
+}
