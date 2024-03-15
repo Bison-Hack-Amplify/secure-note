@@ -7,7 +7,8 @@ import {
   useRoute,
   useNavigation,
 } from "@react-navigation/native";
-import { signIn } from "./signIn";
+import { SignIn } from "./SignIn";
+import {Home} from "./Home";
 
 import styles from "./App.scss";
 
@@ -22,7 +23,8 @@ export default function App() {
             headerShown: false,
           }}
         >
-          <Stack.Screen name="Landing" component={signIn} />
+          <Stack.Screen name="Landing" component={SignIn} />
+          <Stack.Screen name="Home" component={Home} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
