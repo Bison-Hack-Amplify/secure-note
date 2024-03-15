@@ -1,3 +1,37 @@
-.test {
-  background-color: red;
+.signInFoundation{
+  flex: 1;
+  display: flex;
+  background-color: #000;
+}
+
+.signInLogo{
+  background-color: #FF3030;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 25%;
+}
+
+.signInForm{
+  flex-direction: column;
+  // background-color: blue;
+}
+
+.inputContainer{
+  width: 70%;
+  height: 48.177px;
+  flex-shrink: 0;
+  background-color: transparent;
+  margin-bottom: 20px;
+  border: 1px solid #FF3030;
+  border-radius: 18px;
+  padding-left: 10px;
+  margin-top: 20px;
+  
+  
+}
+
+.textInput{
+  flex: 1;
+  height: 100%;
 }
