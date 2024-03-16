@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity } from "react-native";
-import {
-  AntDesign,
-  MaterialIcons,
-  MaterialCommunityIcons,
-  Feather,
-} from "@expo/vector-icons";
+import { FontAwesome, FontAwesome5 } from "@expo/vector-icons";
 import styles from "./scss/NavBar.scss";
 import { useNavigation } from "@react-navigation/native";
 
@@ -18,119 +13,88 @@ const NavBar = ({ id }) => {
     setSelectedButton(buttonName);
   };
 
-  // Handles changing the current address and leading the pop up screen to close
-  const handleAddressClick = (address) => {
-    setPickedAddress(address);
-    setLocation(false);
-  };
   return (
-    <View style={styles.border}>
-      <View style={styles.navBar}>
-        {/* Home Button */}
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => [
-            handleButtonPress("Home"),
-            navigation.navigate("UserHome"),
-          ]}
-        >
-          <AntDesign
-            name="home"
-            size={20}
-            color="#FFBB00"
-            style={[
-              styles.button,
-              selectedButton === "Home" && styles.selectedButton,
-            ]}
-          />
-          <Text
-            style={[
-              styles.buttonword,
-              selectedButton === "Home" && styles.selectedButton,
+    <>
+      <View style={styles.divider}></View>
+      <View style={styles.border}>
+        <View style={styles.navBar}>
+          {/* Home Button */}
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => [
+              handleButtonPress("Home"),
+              navigation.navigate("Home"),
             ]}
           >
-            Home
-          </Text>
-        </TouchableOpacity>
+            <FontAwesome
+              name="home"
+              size={32}
+              color="#FFBB00"
+              style={[
+                styles.button,
+                selectedButton === "Home" && styles.selectedButton,
+              ]}
+            />
+          </TouchableOpacity>
 
-        {/* Favorites Button */}
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => handleButtonPress("Favorites")}
-        >
-          <MaterialIcons
-            name="favorite-outline"
-            size={21}
-            color="#FFBB00"
-            style={[
-              styles.button,
-              selectedButton === "Favorites" && styles.selectedButton,
-            ]}
-          />
-          <Text
-            style={[
-              styles.buttonword,
-              selectedButton === "Favorites" && styles.selectedButton,
+          {/* Search Button */}
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => [
+              handleButtonPress("Browse"),
+              navigation.navigate("Browse"),
             ]}
           >
-            Favorites
-          </Text>
-        </TouchableOpacity>
+            <FontAwesome
+              name="search"
+              size={25}
+              color="#FFBB00"
+              style={[
+                styles.button,
+                selectedButton === "Browse" && styles.selectedButton,
+              ]}
+            />
+          </TouchableOpacity>
 
-        {/* Browse Button */}
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => handleButtonPress("Browse")}
-        >
-          <MaterialCommunityIcons
-            name="store-search-outline"
-            size={22}
-            color="#FFBB00"
-            style={[
-              styles.button,
-              selectedButton === "Browse" && styles.selectedButton,
-            ]}
-          />
-          <Text
-            style={[
-              styles.buttonword,
-              selectedButton === "Browse" && styles.selectedButton,
-            ]}
+          {/* Browse Button */}
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => handleButtonPress("MarketPlace")}
           >
-            Browse
-          </Text>
-        </TouchableOpacity>
+            <FontAwesome5
+              name="store"
+              size={24}
+              color="#FFBB00"
+              style={[
+                styles.button,
+                selectedButton === "MarketPlace" && styles.selectedButton,
+              ]}
+            />
+          </TouchableOpacity>
 
-        {/* Profile Button */}
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => [
-            handleButtonPress("Profile"),
-            navigation.navigate("UserProfile", {
-              id,
-            }),
-          ]}
-        >
-          <Feather
-            name="user"
-            size={20}
-            color="#FFBB00"
-            style={[
-              styles.button,
-              selectedButton === "Profile" && styles.selectedButton,
-            ]}
-          />
-          <Text
-            style={[
-              styles.buttonword,
-              selectedButton === "Profile" && styles.selectedButton,
+          {/* Profile Button */}
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => [
+              handleButtonPress("Profile"),
+              navigation.navigate("Profile", {
+                id,
+              }),
             ]}
           >
-            Profile
-          </Text>
-        </TouchableOpacity>
+            <FontAwesome
+              name="user"
+              size={27}
+              color="#FFBB00"
+              style={[
+                styles.button,
+                selectedButton === "Profile" && styles.selectedButton,
+              ]}
+            />
+          </TouchableOpacity>
+        </View>
       </View>
-    </View>
+    </>
   );
 };
 

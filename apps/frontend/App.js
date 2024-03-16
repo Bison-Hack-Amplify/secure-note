@@ -10,6 +10,7 @@ import {
 import { SignIn } from "./SignIn";
 import { Home } from "./Home";
 import { NavBar } from "./NavBar";
+import { Browse } from "./Browse";
 
 import styles from "./App.scss";
 
@@ -26,6 +27,7 @@ export default function App() {
         >
           <Stack.Screen name="Landing" component={SignIn} />
           <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Browse" component={Browse} />
         </Stack.Navigator>
         <NavBar />
       </NavigationContainer>
