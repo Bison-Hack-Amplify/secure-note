@@ -30,28 +30,13 @@ Please ensure that you have Postgres and pgAdmin installed on your local machine
 
 ### Configuration
 
-Serce Note relies on a local Postgres Database named `note` with the connection port set to `5000`. This configuration only needs to be done once.
-
-1. Open Postgres and click on `Preferences`.
-2. In the pop-up, click the + icon, then name your server (this is not the same as the database). Most users name the server as "PostgreSQL 15".
-3. Once downloaded, open pgAdmin 4 and register your Postgres Server with the following details:
-
-   - Port: 5000
-   - Maintenance database: postgres
-   - Username: postgres
-   - Hostname: localhost (leave blank if it's blank)
-     **If successful, you should now see the 'databases' tab in the left sidebar. **
-
-4. Right-click on the 'databases' tab and select 'Create' then 'Database'.
-5. Name the database 'nexa' in the provided field.
-
 ## Dependencies and Packages
 
-Nexa relies on the power of `pnpm` to manage dependencies and packages.
+Secure Note relies on the power of `pnpm` to manage dependencies and packages.
 
 ### Installing Dependencies
 
-To install all dependencies, run `pnpm install` from the root directory (`minority-two`).
+To install all dependencies, run `pnpm install` from the root directory (`secure-note`).
 
 ### Local Dependencies vs. Global Dependencies
 
