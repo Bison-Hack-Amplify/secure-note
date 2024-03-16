@@ -14,6 +14,10 @@ import { registerRootComponent } from "expo";
 import { FontAwesome, FontAwesome5 } from "@expo/vector-icons";
 import styles from "./scss/MarketPlace.scss";
 import { useNavigation } from "@react-navigation/native";
+import { Vocals } from "./Vocals";
+import { Beats } from "./Beats";
+import { VocalSell } from "./VocalSell";
+import { BeatSell } from "./BeatSell";
 
 export const MarketPlace = () => {
   //   const navigation = useNavigation();
@@ -30,6 +34,12 @@ export const MarketPlace = () => {
     setSelectedBuy(selectedBuy === "Vocals" ? "Beats" : "Vocals");
   };
 
+  const [selectedSell, setSelectedSell] = useState("Vocals");
+
+  const handleSell = () => {
+    setSelectedSell(selectedSell === "Vocals" ? "Beats" : "Vocals");
+  };
+
   return (
     <SafeAreaView style={styles.mpFoundation}>
       <View style={styles.topScreen}>
@@ -42,14 +52,14 @@ export const MarketPlace = () => {
         <Text style={styles.word}>SecureNote</Text>
         <FontAwesome name="search" size={20} color="#FF3030" />
       </View>
-      <View style={styles.container}>
+      <View style={styles.topContainer}>
         <TouchableOpacity
-          style={styles.button}
+          style={styles.topButton}
           onPress={() => handleToggle("Buy")}
         >
           <Text
             style={[
-              styles.buttonText,
+              styles.topButtonText,
               selectedOption === "Buy" && styles.selectedButtonText,
             ]}
           >
@@ -60,12 +70,12 @@ export const MarketPlace = () => {
           )}
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.button}
+          style={styles.topButton}
           onPress={() => handleToggle("Sell")}
         >
           <Text
             style={[
-              styles.buttonText,
+              styles.topButtonText,
               selectedOption === "Sell" && styles.selectedButtonText,
             ]}
           >
@@ -79,37 +89,88 @@ export const MarketPlace = () => {
 
       {/* content below */}
       {selectedOption === "Buy" && (
-        <View>
-          <TouchableOpacity
-            onPress={handleBuy}
-            style={[
-              styles.dropdownToggleVocals,
-              selectedBuy === "Vocals" &&
-                styles.selectedDropdownToggleVocals,
-            ]}
-          >
-            <Text style={styles.dropdownText}>{selectedBuy}</Text>
-          </TouchableOpacity>
-          <View style={styles.dropdownContent}>
-            {selectedBuy === "Vocals" && (
-              <View>
-                {/* Content for Vocals */}
-                <Text style={styles.dropdownText}>
-                  Vocals content goes here
-                </Text>
-              </View>
-            )}
-            {selectedBuy === "Beats" && (
-              <View>
-                {/* Content for Beats */}
-                <Text style={styles.dropdownText}>Beats content goes here</Text>
-              </View>
-            )}
+        <>
+          <View style={styles.bottomContainer}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => handleBuy("Vocals")}
+            >
+              <Text
+                style={[
+                  styles.buttonText,
+                  selectedBuy === "Vocals" && styles.selectedButtonText,
+                ]}
+              >
+                Vocals
+              </Text>
+              {selectedBuy === "Vocals" && (
+                <View style={[styles.underline, styles.selectedUnderline]} />
+              )}
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => handleBuy("Beats")}
+            >
+              <Text
+                style={[
+                  styles.buttonText,
+                  selectedBuy === "Beats" && styles.selectedButtonText,
+                ]}
+              >
+                Beats
+              </Text>
+              {selectedBuy === "Beats" && (
+                <View style={[styles.underline, styles.selectedUnderline]} />
+              )}
+            </TouchableOpacity>
           </View>
-        </View>
+          <View style={styles.dropdownContent}>
+            {selectedBuy === "Vocals" && <Vocals />}
+            {selectedBuy === "Beats" && <Beats />}
+          </View>
+        </>
       )}
       {selectedOption === "Sell" && (
-        <View>{/* Content to display when "Sell" is selected */}</View>
+        <>
+          <View style={styles.bottomContainer}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => handleSell("Vocals")}
+            >
+              <Text
+                style={[
+                  styles.buttonText,
+                  selectedSell === "Vocals" && styles.selectedButtonText,
+                ]}
+              >
+                Vocals
+              </Text>
+              {selectedSell === "Vocals" && (
+                <View style={[styles.underline, styles.selectedUnderline]} />
+              )}
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => handleSell("Beats")}
+            >
+              <Text
+                style={[
+                  styles.buttonText,
+                  selectedSell === "Beats" && styles.selectedButtonText,
+                ]}
+              >
+                Beats
+              </Text>
+              {selectedSell === "Beats" && (
+                <View style={[styles.underline, styles.selectedUnderline]} />
+              )}
+            </TouchableOpacity>
+          </View>
+          <View style={styles.dropdownContent}>
+            {selectedSell === "Vocals" && <VocalSell />}
+            {selectedSell === "Beats" && <BeatSell />}
+          </View>
+        </>
       )}
     </SafeAreaView>
   );
