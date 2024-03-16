@@ -1,71 +1,115 @@
-.browseFoundation{
-    flex: 1;
-    display: flex;
-    background-color: #000;
+.browseFoundation {
+  flex: 1;
+  display: flex;
+  background-color: #000;
 }
 
-.word{
-    color: #FF3030;
-    font-size: 30px;
-    margin: 0 auto;
+.word {
+  color: #ff3030;
+  font-size: 30px;
+  margin: 0 auto;
 }
 
-.artistList{
-    display: flex;
-    flex-direction: column;
+.artistList {
+  display: flex;
+  flex-direction: column;
 }
 
-.artistCard{
-    width: 90%;
-    height: 113px;
-    border-radius: 25px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 5%;
-    background-color: white;
-    justify-content: center;
+.artistCard {
+  width: 90%;
+  height: 113px;
+  border-radius: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 5%;
+  background-color: white;
+  justify-content: center;
 }
 
-.artistCardContent{
-    margin: 0 20px;
-    flex-direction: row;
-    align-items: center;
+.artistCardContent {
+  margin: 0 20px;
+  flex-direction: row;
+  align-items: center;
 }
 
-.artistCardPic{
-    width: 83px;
-    height: 83px;
-    border-radius: 25px;
-    border-color: black;
-    background-color: red;
+.artistCardPic {
+  width: 83px;
+  height: 83px;
+  border-radius: 25px;
+  border-color: black;
+  background-color: red;
 }
 
-.artistCardText{
-    margin-left: 12px;
-    
+.artistCardText {
+  margin-left: 12px;
 }
 
-.artistName{
-    font-size: 17px;
-    font-weight: bold;
+.artistName {
+  font-size: 17px;
+  font-weight: bold;
 }
 
-.artistGenre{
-    font-size: 11px;
+.artistGenre {
+  font-size: 11px;
 }
 
-.artistSamples{
-    font-size: 11px;
+.artistSamples {
+  font-size: 11px;
 }
 
-.artistCardButton{
-    width: 40px;
-    height: 40px;
-    background-color: #000;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    position: absolute;
-    right: 0px; /* Adjust the right position as needed */
-   
+.artistCardButton {
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  position: absolute;
+  right: 0px; /* Adjust the right position as needed */
+}
+
+.word {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.searchBox {
+  display: flex;
+  width: 135px;
+  height: 113px;
+  border-radius: 25px;
+  border: 2px solid #fb0;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  //   margin: 0 30px;
+}
+
+.searchBoxActive {
+  width: 105px;
+  height: 88px;
+  margin-top: 20px;
+  border-radius: 25px;
+  border: 2px solid #fb0;
+  margin: 10px 30px;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+
+.searchBoxParent {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+}
+
+.genreText {
+  color: white;
+}
+
+.genreTextActive {
+  top: 46px;
 }

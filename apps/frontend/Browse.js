@@ -1,4 +1,4 @@
-import { StatusBar } from "expo-status-bar";
+import { StatusBar } from 'expo-status-bar';
 import {
   SafeAreaView,
   Image,
@@ -8,57 +8,80 @@ import {
   Touchable,
   TouchableOpacity,
   ScrollView,
-} from "react-native";
-import { registerRootComponent } from "expo";
-import { FontAwesome, FontAwesome5 } from "@expo/vector-icons";
-import styles from "./scss/Browse.scss";
-import { useNavigation } from "@react-navigation/native";
+} from 'react-native';
+import { registerRootComponent } from 'expo';
+import { FontAwesome, FontAwesome5 } from '@expo/vector-icons';
+import styles from './scss/Browse.scss';
+import { useNavigation } from '@react-navigation/native';
+import { useState } from 'react';
 
 export const Browse = () => {
   const navigation = useNavigation();
 
   const artists = [
     {
-      id: "1",
-      name: "Daniel Reyes",
-      title: "Pop producer & singer",
-      samples: "20",
-      follow: "Follow",
+      id: '1',
+      name: 'Daniel Reyes',
+      title: 'Pop producer & singer',
+      samples: '20',
+      follow: 'Follow',
       image:
-        "https://img.freepik.com/premium-photo/latin-caucasian-man-with-headphones-sitting-floor-practicing-guitar-watching-sheet-music_434738-1081.jpg",
+        'https://img.freepik.com/premium-photo/latin-caucasian-man-with-headphones-sitting-floor-practicing-guitar-watching-sheet-music_434738-1081.jpg',
     },
     {
-      id: "1",
-      name: "Michael Jacobs",
-      title: "Hip Hop producer",
-      samples: "47",
-      follow: "Follow",
+      id: '1',
+      name: 'Michael Jacobs',
+      title: 'Hip Hop producer',
+      samples: '47',
+      follow: 'Follow',
       image:
-        "https://routenote.com/blog/wp-content/uploads/2019/03/Hip-Hop-producer.jpg",
+        'https://routenote.com/blog/wp-content/uploads/2019/03/Hip-Hop-producer.jpg',
     },
     {
-      id: "1",
-      name: "Natasha Royal",
-      title: "Jazz singer",
-      samples: "2",
-      follow: "Following",
+      id: '1',
+      name: 'Natasha Royal',
+      title: 'Jazz singer',
+      samples: '2',
+      follow: 'Following',
       image:
-        "https://previews.123rf.com/images/moodboard/moodboard1304/moodboard130401065/18779375-woman-singing-on-microphone-over-colored-background.jpg",
+        'https://previews.123rf.com/images/moodboard/moodboard1304/moodboard130401065/18779375-woman-singing-on-microphone-over-colored-background.jpg',
     },
     {
-      id: "1",
-      name: "Michelle Carson",
-      title: "Pop singer",
-      samples: "15",
-      follow: "Follow",
+      id: '1',
+      name: 'Michelle Carson',
+      title: 'Pop singer',
+      samples: '15',
+      follow: 'Follow',
       image:
-        "https://thumbs.dreamstime.com/z/portrait-happy-black-woman-singer-music-studio-19193326.jpg?ct=jpeg",
+        'https://thumbs.dreamstime.com/z/portrait-happy-black-woman-singer-music-studio-19193326.jpg?ct=jpeg',
     },
   ];
+
+  const genres = ['Hiphop', 'All', 'R&B', 'Afrobeats', ''];
+  const [activeGenre, setActiveGenre] = useState('All');
 
   return (
     <SafeAreaView style={styles.browseFoundation}>
       <Text style={styles.word}>SecureNote</Text>
+
+      <ScrollView
+        horizontal={true}
+        style={styles.searchBoxParent}
+        showsHorizontalScrollIndicator={false}
+      >
+        {genres.map((genre) => (
+          <View
+            style={
+              genre != activeGenre ? styles.searchBoxActive : styles.searchBox
+            }
+          >
+            <View style={genre == activeGenre ? styles.genreTextActive : ''}>
+              <Text style={styles.genreText}>{genre}</Text>
+            </View>
+          </View>
+        ))}
+      </ScrollView>
+
       <ScrollView style={styles.artistList}>
         {artists.map((card) => (
           <View style={styles.artistCard} key={card.id}>
@@ -77,7 +100,7 @@ export const Browse = () => {
               </View>
 
               <View style={styles.artistCardButton}>
-                <FontAwesome name="play" size={20} color="#FFBB00" />
+                <FontAwesome name='play' size={20} color='#FFBB00' />
               </View>
             </View>
           </View>
