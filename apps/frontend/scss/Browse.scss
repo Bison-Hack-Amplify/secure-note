@@ -21,7 +21,7 @@
     border-radius: 25px;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 11%;
+    margin-bottom: 5%;
     background-color: white;
     justify-content: center;
 }
@@ -29,6 +29,7 @@
 .artistCardContent{
     margin: 0 20px;
     flex-direction: row;
+    align-items: center;
 }
 
 .artistCardPic{
@@ -39,3 +40,32 @@
     background-color: red;
 }
 
+.artistCardText{
+    margin-left: 12px;
+    
+}
+
+.artistName{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.artistGenre{
+    font-size: 11px;
+}
+
+.artistSamples{
+    font-size: 11px;
+}
+
+.artistCardButton{
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: absolute;
+    right: 0px; /* Adjust the right position as needed */
+   
+}

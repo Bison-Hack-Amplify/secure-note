@@ -10,6 +10,7 @@ import {
   ScrollView,
 } from "react-native";
 import { registerRootComponent } from "expo";
+import { FontAwesome, FontAwesome5 } from "@expo/vector-icons";
 import styles from "./scss/Browse.scss";
 import { useNavigation } from "@react-navigation/native";
 
@@ -22,20 +23,25 @@ export const Browse = () => {
       name: "Daniel Reyes",
       title: "Pop producer & singer",
       samples: "20",
-      image: "https://img.freepik.com/premium-photo/latin-caucasian-man-with-headphones-sitting-floor-practicing-guitar-watching-sheet-music_434738-1081.jpg",
+      follow: "Follow",
+      image:
+        "https://img.freepik.com/premium-photo/latin-caucasian-man-with-headphones-sitting-floor-practicing-guitar-watching-sheet-music_434738-1081.jpg",
     },
     {
       id: "1",
       name: "Michael Jacobs",
       title: "Hip Hop producer",
       samples: "47",
-      image: "https://routenote.com/blog/wp-content/uploads/2019/03/Hip-Hop-producer.jpg",
+      follow: "Follow",
+      image:
+        "https://routenote.com/blog/wp-content/uploads/2019/03/Hip-Hop-producer.jpg",
     },
     {
       id: "1",
       name: "Natasha Royal",
       title: "Jazz singer",
       samples: "2",
+      follow: "Following",
       image:
         "https://previews.123rf.com/images/moodboard/moodboard1304/moodboard130401065/18779375-woman-singing-on-microphone-over-colored-background.jpg",
     },
@@ -44,6 +50,7 @@ export const Browse = () => {
       name: "Michelle Carson",
       title: "Pop singer",
       samples: "15",
+      follow: "Follow",
       image:
         "https://thumbs.dreamstime.com/z/portrait-happy-black-woman-singer-music-studio-19193326.jpg?ct=jpeg",
     },
@@ -63,7 +70,14 @@ export const Browse = () => {
               <View style={styles.artistCardText}>
                 <Text style={styles.artistName}>{card.name}</Text>
                 <Text style={styles.artistGenre}>{card.title}</Text>
-                <Text style={styles.artistSamples}>{card.samples} samples available</Text>
+                <Text style={styles.artistSamples}>
+                  {card.samples} samples available
+                </Text>
+                <Text style={styles.artistGenre}>{card.follow}</Text>
+              </View>
+
+              <View style={styles.artistCardButton}>
+                <FontAwesome name="play" size={20} color="#FFBB00" />
               </View>
             </View>
           </View>
