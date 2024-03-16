@@ -4,3 +4,33 @@
     background-color: #000;
 }
 
+
+
+.topScreen{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    // background-color: blue;
+    width: 100%;
+
+    
+}
+
+.profilePic{
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.word{
+    color: #FF3030;
+    font-size: 30px;
+}
+
+.topToggle{
+    display: flex;
+    margin-top: 7%;
+}
+

@@ -105,7 +105,7 @@
   width: 135px;
   height: 113px;
   border-radius: 25px;
-  border: 2px solid #fb0;
+  border: 2px solid rgb(61, 61, 61);
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -113,19 +113,19 @@
   //   margin: 0 30px;
 }
 
-.searchBoxActive {
-  width: 105px;
-  height: 88px;
-  margin-top: 20px;
-  border-radius: 25px;
-  border: 2px solid #fb0;
-  margin: 10px 30px;
-  align-items: flex-end;
-  display: flex;
-  flex-direction: row;
-  display: flex;
-  justify-content: center;
-}
+// .searchBoxActive {
+//   width: 105px;
+//   height: 88px;
+//   margin-top: 20px;
+//   border-radius: 25px;
+//   border: 2px solid #fb0;
+//   margin: 10px 30px;
+//   align-items: flex-end;
+//   display: flex;
+//   flex-direction: row;
+//   display: flex;
+//   justify-content: center;
+// }
 
 .searchBoxParent {
   display: flex;
@@ -141,4 +141,17 @@
 
 .genreTextActive {
   top: 46px;
+}
+
+.imageBackground{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  border-radius: 25px;
+ 
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

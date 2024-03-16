@@ -1,27 +1,38 @@
 .musicBoxes {
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 160px;
+    flex-direction: column;
+    
+    margin-bottom: 110px;
     // flex-wrap: wrap;
   }
 
   .musicBoxView{
     margin-bottom: 10px;
+    margin-top: 18px;
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items vertically */
   }
   
   .musicBox {
-    width: 50%; /* Adjust width as needed */
-    height: 100px;
+    width: 90%; /* Adjust width as needed */
+    height: 150px;
+    margin: 0 auto;
     // margin-bottom: 20px; /* Adjust margin as needed */
-    margin-right: 20px;
     border: 1px white solid;
     border-radius: 25%;
+
     // background-color: #fff; 
+  }
+
+  .musicBoxBelow{
+    flex-direction: row;
+    align-items: center;
   }
 
   .musicBoxContent{
     flex-direction: column;
-    margin-left: 10px;
+    flex: 1;
+    margin-left: 8%;
     margin-top: 4px;
   }
 
@@ -45,11 +56,18 @@
     margin-top: 1%;
   }
 
-  .musicButton{
-    // width: 10%;
-    color:#FFBB00;
-    margin-left: 1%;
+  .buyButton {
+    width: 60px;
+    height: 40px;
+    background-color: #FFBB00;
     align-items: center;
     justify-content: center;
-    
+    border-radius: 10px;
+    position: absolute;
+    right: 6%; /* Adjust the right position as needed */
+  }
+
+  .buyButtonText{
+    color: white;
+    font-weight: 500;
   }
