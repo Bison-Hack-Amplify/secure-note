@@ -29,7 +29,7 @@ const NavBar = ({ id }) => {
             <FontAwesome
               name="home"
               size={32}
-              color="#FFBB00"
+              color="white"
               style={[
                 styles.button,
                 selectedButton === "Home" && styles.selectedButton,
@@ -48,7 +48,7 @@ const NavBar = ({ id }) => {
             <FontAwesome
               name="search"
               size={25}
-              color="#FFBB00"
+              color="white"
               style={[
                 styles.button,
                 selectedButton === "Browse" && styles.selectedButton,
@@ -64,7 +64,7 @@ const NavBar = ({ id }) => {
             <FontAwesome5
               name="store"
               size={24}
-              color="#FFBB00"
+              color="white"
               style={[
                 styles.button,
                 selectedButton === "MarketPlace" && styles.selectedButton,
@@ -85,7 +85,7 @@ const NavBar = ({ id }) => {
             <FontAwesome
               name="user"
               size={27}
-              color="#FFBB00"
+              color="white"
               style={[
                 styles.button,
                 selectedButton === "Profile" && styles.selectedButton,
