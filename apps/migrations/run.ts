@@ -3,7 +3,7 @@ import * as path from 'path';
 import { pool } from '@amplify/postgres-node';
 import { updateMigrationTable, getAppliedMigrations } from './helpers';
 
-const appliedMigrations = await getAppliedMigrations();
+// const appliedMigrations = await getAppliedMigrations();
 
 //  Function to run a single migration file
 async function runMigration(fileName: string): Promise<void> {
@@ -51,4 +51,4 @@ async function runMigrations(): Promise<void> {
   pool.end();
 }
 
-runMigrations();
+// runMigrations();
