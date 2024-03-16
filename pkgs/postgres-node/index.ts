@@ -36,10 +36,12 @@ const getPostgresPool = async () => {
   }
 };
 
-const pool = await getPostgresPool();
+const pool = async () => {
+  await getPostgresPool();
+};
 export { pool };
 
-export function mergeModulesSchemaWith(mergeIn) {
+export function mergeModulesSchemaWith(mergeIn: any) {
   return mergeSchemas({
     ...mergeIn,
   });
