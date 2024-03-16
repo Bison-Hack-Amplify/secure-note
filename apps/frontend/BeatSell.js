@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import {
   SafeAreaView,
-  StyleSheet,
+  Image,
   Text,
   View,
   TextInput,
@@ -20,7 +20,12 @@ export const BeatSell = () => {
     <SafeAreaView style={styles.Foundation}>
       <ScrollView>
         <View style={styles.info}>
-          <View style={styles.Box} />
+          <Image
+            style={styles.Box}
+            source={{
+              uri: "https://thumbs.dreamstime.com/b/dynamic-radial-color-sound-equalizer-design-music-album-cover-template-abstract-circular-digital-data-form-vector-160916775.jpg",
+            }}
+          />
           <Text style={styles.Title}>Midnight Groove</Text>
           <Text style={styles.Genres}>Genres(s): R&B,Soul</Text>
           <Text style={styles.Price}>Price: $27.50</Text>

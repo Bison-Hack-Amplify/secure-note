@@ -4,7 +4,7 @@ import {
   StyleSheet,
   Text,
   View,
-  TextInput,
+  Image,
   Touchable,
   TouchableOpacity,
   ScrollView,
@@ -20,7 +20,12 @@ export const VocalSell = () => {
     <SafeAreaView style={styles.Foundation}>
       <ScrollView>
         <View style={styles.info}>
-          <View style={styles.Box} />
+        <Image
+            style={styles.Box}
+            source={{
+              uri: "https://www.creativefabrica.com/wp-content/uploads/2023/06/04/Old-School-Rap-Music-Album-Cover-71330763-1.png",
+            }}
+          />
           <Text style={styles.Title}>DC Freestyles</Text>
           <Text style={styles.Genres}>Genres(s): Rap,Trap</Text>
           <Text style={styles.Price}>Price: $33.50</Text>
