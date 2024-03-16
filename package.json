@@ -1,5 +1,6 @@
 {
   "private": true,
+  "target": "es2017",
   "name": "@amplify/monorepo",
   "scripts": {
     "dev": "pnpm migrate && turbo dev",

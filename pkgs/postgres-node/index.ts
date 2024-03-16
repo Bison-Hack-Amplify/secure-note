@@ -3,37 +3,24 @@ import { mergeSchemas } from '@graphql-tools/schema';
 
 const { Pool } = pkg;
 
-const existingPool = new Pool({
-  user: '',
-  host: 'localhost',
-  database: 'amplify',
-  password: '',
-  port: 5000, // Default PostgreSQL port is 5432
-});
-
-const newUserPool = new Pool({
-  user: '',
-  host: 'localhost',
-  password: '',
-  port: 5000, // Default PostgreSQL port is 5432
-});
-
 const getPostgresPool = async () => {
-  try {
-    existingPool.connect();
-    existingPool.end();
-    return newUserPool;
-  } catch (err) {
-    {
-      return newUserPool;
-    }
-  }
+  const existing = new Pool({
+    user: '',
+    host: 'localhost',
+    password: '',
+    database: 'amplify',
+    port: 5432, // Default PostgreSQL port is 5432
+  });
+
+  return existing;
 };
 
-const pool = await getPostgresPool();
+const pool = async () => {
+  await getPostgresPool();
+};
 export { pool };
 
-export function mergeModulesSchemaWith(mergeIn) {
+export function mergeModulesSchemaWith(mergeIn: any) {
   return mergeSchemas({
     ...mergeIn,
   });
