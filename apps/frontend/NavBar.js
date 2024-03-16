@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
-import { FontAwesome, FontAwesome5 } from "@expo/vector-icons";
-import styles from "./scss/NavBar.scss";
-import { useNavigation } from "@react-navigation/native";
+import React, { useState } from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
+import { FontAwesome, FontAwesome5 } from '@expo/vector-icons';
+import styles from './scss/NavBar.scss';
+import { useNavigation } from '@react-navigation/native';
 
 const NavBar = () => {
   const navigation = useNavigation();
-  const [selectedButton, setSelectedButton] = useState("Home"); // Current button selected in Navbar
+  const [selectedButton, setSelectedButton] = useState('Home'); // Current button selected in Navbar
 
   // Handles changing the current button clicked in the NavBar
   const handleButtonPress = (buttonName) => {
@@ -22,17 +22,17 @@ const NavBar = () => {
           <TouchableOpacity
             style={styles.button}
             onPress={() => {
-              handleButtonPress("Home");
-              navigation.navigate("Home");
+              handleButtonPress('Home');
+              navigation.navigate('Home');
             }}
           >
             <FontAwesome
-              name="home"
+              name='home'
               size={32}
-              color="white"
+              color='white'
               style={[
                 styles.button,
-                selectedButton === "Home" && styles.selectedButton,
+                selectedButton === 'Home' && styles.selectedButton,
               ]}
             />
           </TouchableOpacity>
@@ -41,17 +41,17 @@ const NavBar = () => {
           <TouchableOpacity
             style={styles.button}
             onPress={() => {
-              handleButtonPress("Browse");
-              navigation.navigate("Browse");
+              handleButtonPress('Browse');
+              navigation.navigate('Browse');
             }}
           >
             <FontAwesome
-              name="search"
+              name='search'
               size={25}
-              color="white"
+              color='white'
               style={[
                 styles.button,
-                selectedButton === "Browse" && styles.selectedButton,
+                selectedButton === 'Browse' && styles.selectedButton,
               ]}
             />
           </TouchableOpacity>
@@ -60,18 +60,18 @@ const NavBar = () => {
           <TouchableOpacity
             style={styles.button}
             onPress={() => {
-              handleButtonPress("MarketPlace");
-              navigation.navigate("MarketPlace");
+              handleButtonPress('MarketPlace');
+              navigation.navigate('MarketPlace');
             }}
             MarketPlace
           >
             <FontAwesome5
-              name="store"
+              name='store'
               size={24}
-              color="white"
+              color='white'
               style={[
                 styles.button,
-                selectedButton === "MarketPlace" && styles.selectedButton,
+                selectedButton === 'MarketPlace' && styles.selectedButton,
               ]}
             />
           </TouchableOpacity>
@@ -80,17 +80,17 @@ const NavBar = () => {
           <TouchableOpacity
             style={styles.button}
             onPress={() => {
-              handleButtonPress("Profile");
-              navigation.navigate("Profile");
+              handleButtonPress('Profile');
+              navigation.navigate('Profile');
             }}
           >
             <FontAwesome
-              name="user"
+              name='user'
               size={27}
-              color="white"
+              color='white'
               style={[
                 styles.button,
-                selectedButton === "Profile" && styles.selectedButton,
+                selectedButton === 'Profile' && styles.selectedButton,
               ]}
             />
           </TouchableOpacity>

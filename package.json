@@ -2,7 +2,8 @@
   "private": true,
   "name": "@amplify/monorepo",
   "scripts": {
-    "dev": "echo 'hello'"
+    "dev": "pnpm migrate && turbo dev",
+    "migrate": "cd ./apps/migrations && pnpm migrate"
   },
   "pnpm": {
     "peerDependencyRules": {
@@ -27,6 +28,5 @@
     "turbo": "^1.12.2",
     "typescript": "^5.3.3"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

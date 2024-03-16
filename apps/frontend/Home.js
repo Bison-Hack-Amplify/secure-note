@@ -1,4 +1,4 @@
-import { StatusBar } from "expo-status-bar";
+import { StatusBar } from 'expo-status-bar';
 import {
   SafeAreaView,
   StyleSheet,
@@ -7,13 +7,18 @@ import {
   TextInput,
   Touchable,
   TouchableOpacity,
-} from "react-native";
-import { registerRootComponent } from "expo";
-import styles from "./scss/Home.scss";
-import { useNavigation } from "@react-navigation/native";
+} from 'react-native';
+import { registerRootComponent } from 'expo';
+import styles from './scss/Home.scss';
+import { useNavigation } from '@react-navigation/native';
+import { NavBar } from './NavBar';
 
-export const Home = () => {
+export const Home = ({ route }) => {
   const navigation = useNavigation();
 
-  return <SafeAreaView style={styles.homeFoundation}></SafeAreaView>;
+  return (
+    <>
+      <SafeAreaView style={styles.homeFoundation}></SafeAreaView>
+    </>
+  );
 };
