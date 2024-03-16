@@ -21,20 +21,24 @@ export const Browse = () => {
 
   const genres = [
     {
-      id: '1',
-      name: 'Hiphop',
+
+      id: "1",
+      name: "Hiphop",
       image:
-        'https://media.istockphoto.com/id/92026251/photo/hip-hop-musician.jpg?b=1&s=612x612&w=0&k=20&c=WoKtOTf7AfvCdURX_mapqnZ8lq2GiPlHF7AfO09ikpU=',
+        "https://img.freepik.com/free-photo/3d-abstract-modern-background-with-flowing-particles_1048-12778.jpg?w=1800&t=st=1710605963~exp=1710606563~hmac=3681ff855ae83ae0c6775c57cd0fb3d130f763be33770c9197d1e769f4f236d9",
     },
     {
-      id: '2',
-      name: 'All',
-      image: '',
+      id: "2",
+      name: "All",
+      image:
+        "https://img.freepik.com/free-photo/abstract-dark-background-with-purple-lines-generative-ai_169016-30676.jpg?w=740&t=st=1710605974~exp=1710606574~hmac=6a00509da5eb00c5b549699a9495058fa32519e2fc24d14dab5d3294d7c4fc11",
     },
     {
-      id: '3',
-      name: 'R&B',
-      image: '',
+      id: "3",
+      name: "R&B",
+      image:
+        "https://img.freepik.com/free-photo/3d-render-abstract-background-with-flowing-particle-design_1048-13613.jpg?w=1800&t=st=1710605982~exp=1710606582~hmac=18ac29dbe3524c21eb10ddf609aedf853dc87c0c2a763d9ba7d011358fe2ddad",
+
     },
     {
       id: '4',
@@ -149,13 +153,18 @@ export const Browse = () => {
         {genres.map((genre) => (
           <View
             style={
-              genre.name != activeGenre
-                ? styles.searchBoxActive
-                : styles.searchBox
+              genre.name !== activeGenre ? styles.searchBox : styles.searchBox
             }
           >
+            {/* <Image
+              style={styles.imageBackground}
+              source={{ uri: genre.image }}
+            /> */}
+          
             <ImageBackground
-              style={genre.name == activeGenre ? styles.genreTextActive : ''}
+
+              style={styles.imageBackground}
+
               source={{ uri: genre.image }}
             >
               <Text style={styles.genreText}>{genre.name}</Text>
