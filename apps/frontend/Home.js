@@ -1,4 +1,4 @@
-import { StatusBar } from "expo-status-bar";
+import { StatusBar } from 'expo-status-bar';
 import {
   SafeAreaView,
   StyleSheet,
@@ -18,9 +18,12 @@ import { FontAwesome, FontAwesome5 } from "@expo/vector-icons";
 import { Following } from "./Following";
 import { TrendingArtist } from "./TrendingArtist";
 import { Event } from "./Events";
+} from 'react-native';
 
-export const Home = () => {
+
+export const Home = ({ route }) => {
   const navigation = useNavigation();
+
 
   const [selectedOption, setSelectedOption] = useState("Following");
 
@@ -63,5 +66,6 @@ export const Home = () => {
       {selectedOption === "Trending Artist" && <TrendingArtist />}
       {selectedOption === "Events" && <Following />}
     </SafeAreaView>
+
   );
 };
