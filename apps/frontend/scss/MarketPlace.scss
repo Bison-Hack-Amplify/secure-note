@@ -27,16 +27,29 @@
 }
 
 
-.container {
+.topContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 8%;
+    margin-top: 3%;
+  }
+
+  .bottomContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
   }
   
+  .topButton {
+    padding: 10px 40px;
+    margin: 0 5px;
+  }
+
   .button {
-    padding: 10px 20px;
+    padding: 10px 10px;
     margin: 0 5px;
   }
   
@@ -45,7 +58,13 @@
   }
   
   .buttonText {
-    font-size: 20px;
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 6px;
+  }
+  .topButtonText {
+    font-size: 23px;
     font-weight: bold;
     color: white;
     margin-bottom: 6px;
@@ -97,13 +116,14 @@
   }
 
   .dropdownToggle {
-    width: 25%;
+    width: 20%;
     padding: 10px;
     border-width: 1px;
     border-color: #FFBB00;
     border-radius: 5px;
     align-items: center;
     margin-top: 10px;
+    margin-left: 3%;
   }
   
   .dropdownText {

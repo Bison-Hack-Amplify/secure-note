@@ -1,0 +1,53 @@
+.musicBoxes {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .musicBoxView{
+    margin-bottom: 10px;
+  }
+  
+  .musicBox {
+    width: 200px; /* Adjust width as needed */
+    height: 100px;
+    // margin-bottom: 20px; /* Adjust margin as needed */
+    // margin-right: 20px;
+    border: 1px white solid;
+    border-radius: 25%;
+    // background-color: #fff; 
+  }
+
+  .musicBoxContent{
+    flex-direction: column;
+    margin-left: 10px;
+    margin-top: 4px;
+  }
+
+  .musicArtName{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 1px;
+  }
+  .musicName{
+    color: white;
+    font-size: 13px;
+  }
+  .musicPrice{
+    color: white;
+    font-size: 14px;
+  }
+
+  .PriceBuy{
+    flex-direction: row;
+    margin-top: 1%;
+  }
+
+  .musicButton{
+    // width: 10%;
+    color:#FFBB00;
+    margin-left: 1%;
+    align-items: center;
+    justify-content: center;
+    
+  }

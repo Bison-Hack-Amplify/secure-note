@@ -1,0 +1,80 @@
+.Foundation{
+    // flex: 1;
+    display: flex;
+    align-items: center; /* Ensure the content is vertically centered */
+    justify-content: center;
+    // background-color: #000;
+}
+
+.info{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.Box {
+    width: 152px; /* Adjust width as needed */
+    height: 152px;
+    border: 1px white solid;
+    border-radius: 25%;
+  }
+
+  .Title {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 3px;
+  }
+  
+  .Genres{
+    color: rgb(198, 198, 198);
+    font-weight: 300;
+    margin-bottom: 15px;
+    
+  }
+
+   .Price {
+    color: white;
+    font-weight: 700;
+  }
+
+  .description{
+    flex-direction: column;
+    margin-top: 10%;
+    margin-left: 3%;
+    margin-right: 3%;
+    // align-items: center;
+    // justify-content: center;
+  }
+
+  .descriptionTitle{
+    color: #FFBB00;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .descriptionText{
+    color: white;
+    margin-top: 5%;
+    margin-bottom: 216px;
+  }
+
+  .Button{
+    width: 77%;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF3030;
+    margin-bottom: 20px;
+    border: 1px solid #FF3030;
+    border-radius: 25px;
+    
+    margin-top: 10%;
+  }
+
+  .Text{
+    font-size: 20px;
+    color: white;
+  }
