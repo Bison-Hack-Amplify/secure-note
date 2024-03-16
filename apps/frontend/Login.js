@@ -7,6 +7,7 @@ import {
   TextInput,
   Touchable,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import { registerRootComponent } from 'expo';
 import styles from './scss/signIn.scss';
@@ -18,15 +19,15 @@ import {
   useScreenState,
 } from './stores/screen';
 
+import logo from './assets/logo.png';
+
 export const Login = () => {
   const navigation = useNavigation();
   const dispatch = useScreenDispatch();
 
   return (
     <SafeAreaView style={styles.signInFoundation}>
-      <View style={styles.signInLogo}>
-        <Text>SecureNote</Text>
-      </View>
+      <Image style={styles.signInLogo} source={logo}></Image>
 
       <View style={styles.signInForm}>
         <View style={styles.inputContainerEmail}>

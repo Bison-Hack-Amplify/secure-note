@@ -1,93 +1,92 @@
-.signInFoundation{
-    flex: 1;
-    display: flex;
-    background-color: #000;
-  }
-  
-  .signInLogo{
-    background-color: #FF3030;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-    margin-top: 25%;
-  }
-  
-  .signInForm{
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    margin-top: 12%;
-  }
-  
-  .inputContainerEmail{
-    width: 77%;
-    height: 55px;
-    background-color: transparent;
-    border: 1px solid #FF3030;
-    border-radius: 25px;
-    padding-left: 25px;
-    margin-bottom: 10%;
-  }
+.signInFoundation {
+  flex: 1;
+  display: flex;
+  background-color: #000;
+}
 
-  .inputContainerPassword{
-    width: 77%;
-    height: 55px;
-    background-color: transparent;
-    border: 1px solid #FF3030;
-    border-radius: 25px;
-    padding-left: 25px;
-  }
-  
-  .textInput{
-    flex: 1;
-    height: 100%;
-    color: white;
-  }
+.signInLogo {
+  width: 160px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 25%;
+}
 
-  .forgotPasswordWrapper {
-    width: 73%;
-    align-items: flex-end;
-    margin-top: 3%;
-  }
+.signInForm {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  margin-top: 12%;
+}
 
-  .forgotPassword{
-    color: #FFBB00;
-  }
+.inputContainerEmail {
+  width: 77%;
+  height: 55px;
+  background-color: transparent;
+  border: 1px solid #ff3030;
+  border-radius: 25px;
+  padding-left: 25px;
+  margin-bottom: 10%;
+}
 
-  .Button{
-    width: 77%;
-    height: 55px;
-    align-items: center;
-    justify-content: center;
-    background-color: #FF3030;
-    margin-bottom: 20px;
-    border: 1px solid #FF3030;
-    border-radius: 25px;
-    
-    margin-top: 10%;
-  }
+.inputContainerPassword {
+  width: 77%;
+  height: 55px;
+  background-color: transparent;
+  border: 1px solid #ff3030;
+  border-radius: 25px;
+  padding-left: 25px;
+}
 
-  .Text{
-    font-size: 20px;
-    color: white;
-  }
+.textInput {
+  flex: 1;
+  height: 100%;
+  color: white;
+}
 
-  .signUpOption{
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-top: 20%;
-    
-    // background-color: blue;
-    // margin-top: 10%;
-  }
+.forgotPasswordWrapper {
+  width: 73%;
+  align-items: flex-end;
+  margin-top: 3%;
+}
 
-  .Question{
-    color: white;
-    margin-right: 3px;
-  }
+.forgotPassword {
+  color: #ffbb00;
+}
 
-  .Register{
-    color:#FFBB00;
-  }
+.Button {
+  width: 77%;
+  height: 55px;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff3030;
+  margin-bottom: 20px;
+  border: 1px solid #ff3030;
+  border-radius: 25px;
+
+  margin-top: 10%;
+}
+
+.Text {
+  font-size: 20px;
+  color: white;
+}
+
+.signUpOption {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 20%;
+
+  // background-color: blue;
+  // margin-top: 10%;
+}
+
+.Question {
+  color: white;
+  margin-right: 3px;
+}
+
+.Register {
+  color: #ffbb00;
+}
