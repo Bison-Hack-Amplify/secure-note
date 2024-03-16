@@ -1,0 +1,29 @@
+.border{
+    width: 100%;
+    border-top: 2px solid white;
+    background-color: #000;
+}
+
+.navBar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: '#000';
+    margin: 10px 38px;
+  }
+  
+  .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .buttonword {
+    font-size: 12px;
+    padding-bottom: 25px;
+    color:  #FFBB00
+  }
+  
+  .selectedButton {
+    color:  #FF3030;
+  }
