@@ -1,0 +1,41 @@
+.browseFoundation{
+    flex: 1;
+    display: flex;
+    background-color: #000;
+}
+
+.word{
+    color: #FF3030;
+    font-size: 30px;
+    margin: 0 auto;
+}
+
+.artistList{
+    display: flex;
+    flex-direction: column;
+}
+
+.artistCard{
+    width: 90%;
+    height: 113px;
+    border-radius: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 11%;
+    background-color: white;
+    justify-content: center;
+}
+
+.artistCardContent{
+    margin: 0 20px;
+    flex-direction: row;
+}
+
+.artistCardPic{
+    width: 83px;
+    height: 83px;
+    border-radius: 25px;
+    border-color: black;
+    background-color: red;
+}
+
