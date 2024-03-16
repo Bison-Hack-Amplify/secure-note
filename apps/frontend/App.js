@@ -7,11 +7,12 @@ import {
   useRoute,
   useNavigation,
 } from "@react-navigation/native";
-import { SignIn } from "./SignIn";
+
 import { Home } from "./Home";
 import { NavBar } from "./NavBar";
 import { Browse } from "./Browse";
-
+import { Login } from "./Login";
+import { MarketPlace } from "./MarketPlace";
 import styles from "./App.scss";
 
 export default function App() {
@@ -25,9 +26,10 @@ export default function App() {
             headerShown: false,
           }}
         >
-          <Stack.Screen name="Landing" component={SignIn} />
+          <Stack.Screen name="Landing" component={Login} />
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Browse" component={Browse} />
+          <Stack.Screen name="MarketPlace" component={MarketPlace} />
         </Stack.Navigator>
         <NavBar />
       </NavigationContainer>

@@ -4,7 +4,7 @@ import { registerRootComponent } from "expo";
 import styles from "./scss/signIn.scss";
 import { useNavigation } from "@react-navigation/native";
 
-export const SignIn = () => {
+export const Login = () => {
   const navigation = useNavigation();
 
   return (
