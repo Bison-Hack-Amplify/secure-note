@@ -11,14 +11,9 @@ import {
 import { registerRootComponent } from "expo";
 import styles from "./scss/Home.scss";
 import { useNavigation } from "@react-navigation/native";
-import { NavBar } from "./NavBar";
 
 export const Home = () => {
   const navigation = useNavigation();
 
-  return (
-    <SafeAreaView style={styles.homeFoundation}>
-      <NavBar/>
-    </SafeAreaView>
-  );
+  return <SafeAreaView style={styles.homeFoundation}></SafeAreaView>;
 };

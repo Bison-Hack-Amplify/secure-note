@@ -37,7 +37,7 @@ const NavBar = ({ id }) => {
           <AntDesign
             name="home"
             size={20}
-            color="black"
+            color="#FFBB00"
             style={[
               styles.button,
               selectedButton === "Home" && styles.selectedButton,
@@ -61,7 +61,7 @@ const NavBar = ({ id }) => {
           <MaterialIcons
             name="favorite-outline"
             size={21}
-            color="black"
+            color="#FFBB00"
             style={[
               styles.button,
               selectedButton === "Favorites" && styles.selectedButton,
@@ -85,7 +85,7 @@ const NavBar = ({ id }) => {
           <MaterialCommunityIcons
             name="store-search-outline"
             size={22}
-            color="black"
+            color="#FFBB00"
             style={[
               styles.button,
               selectedButton === "Browse" && styles.selectedButton,
@@ -114,7 +114,7 @@ const NavBar = ({ id }) => {
           <Feather
             name="user"
             size={20}
-            color="black"
+            color="#FFBB00"
             style={[
               styles.button,
               selectedButton === "Profile" && styles.selectedButton,

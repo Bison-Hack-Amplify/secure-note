@@ -8,7 +8,8 @@ import {
   useNavigation,
 } from "@react-navigation/native";
 import { SignIn } from "./SignIn";
-import {Home} from "./Home";
+import { Home } from "./Home";
+import { NavBar } from "./NavBar";
 
 import styles from "./App.scss";
 
@@ -26,6 +27,7 @@ export default function App() {
           <Stack.Screen name="Landing" component={SignIn} />
           <Stack.Screen name="Home" component={Home} />
         </Stack.Navigator>
+        <NavBar />
       </NavigationContainer>
     </>
   );
