@@ -4,7 +4,7 @@ import { FontAwesome, FontAwesome5 } from "@expo/vector-icons";
 import styles from "./scss/NavBar.scss";
 import { useNavigation } from "@react-navigation/native";
 
-const NavBar = ({ id }) => {
+const NavBar = () => {
   const navigation = useNavigation();
   const [selectedButton, setSelectedButton] = useState("Home"); // Current button selected in Navbar
 
@@ -21,10 +21,10 @@ const NavBar = ({ id }) => {
           {/* Home Button */}
           <TouchableOpacity
             style={styles.button}
-            onPress={() => [
-              handleButtonPress("Home"),
-              navigation.navigate("Home"),
-            ]}
+            onPress={() => {
+              handleButtonPress("Home");
+              navigation.navigate("Home");
+            }}
           >
             <FontAwesome
               name="home"
@@ -40,10 +40,10 @@ const NavBar = ({ id }) => {
           {/* Search Button */}
           <TouchableOpacity
             style={styles.button}
-            onPress={() => [
-              handleButtonPress("Browse"),
-              navigation.navigate("Browse"),
-            ]}
+            onPress={() => {
+              handleButtonPress("Browse");
+              navigation.navigate("Browse");
+            }}
           >
             <FontAwesome
               name="search"
@@ -56,10 +56,14 @@ const NavBar = ({ id }) => {
             />
           </TouchableOpacity>
 
-          {/* Browse Button */}
+          {/* MarketPlace Button */}
           <TouchableOpacity
             style={styles.button}
-            onPress={() => handleButtonPress("MarketPlace")}
+            onPress={() => {
+              handleButtonPress("MarketPlace");
+              navigation.navigate("MarketPlace");
+            }}
+            MarketPlace
           >
             <FontAwesome5
               name="store"
@@ -75,12 +79,10 @@ const NavBar = ({ id }) => {
           {/* Profile Button */}
           <TouchableOpacity
             style={styles.button}
-            onPress={() => [
-              handleButtonPress("Profile"),
-              navigation.navigate("Profile", {
-                id,
-              }),
-            ]}
+            onPress={() => {
+              handleButtonPress("Profile");
+              navigation.navigate("Profile");
+            }}
           >
             <FontAwesome
               name="user"
